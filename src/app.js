@@ -14,10 +14,10 @@ function calculateStockValue() {
     var profitOrLose = (newStockPrice - totalStockPurchasePrice);
     var profitOrLosePercent = ((((b * c) / (a * b)) - 1) * 100);
     if (profitOrLose > 0) {
-        output.innerText = "Hey, the profit is " + profitOrLose + " and the percent is " + profitOrLosePercent + "%";
+        output.innerText = "Hey, the profit is " + profitOrLose + " and the percent is " + profitOrLosePercent.toFixed(2) + "%";
         document.querySelector("body").style.backgroundColor = "#b8ffd9";
     } else if (profitOrLose < 0) {
-        output.innerText = "Ops, the loss is " + profitOrLose + " and the percent is " + profitOrLosePercent + "%";
+        output.innerText = "Ops, the loss is " + profitOrLose + " and the percent is " + profitOrLosePercent.toFixed(2) + "%";
         document.querySelector("body").style.backgroundColor = "#ffb8ba";
 
     } else if (profitOrLose === 0) {
